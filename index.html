@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LinkedIn Callback</title>
+  </head>
+  <body>
+    <h2>LinkedIn Authorization Code</h2>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const code = urlParams.get("code");
+      const state = urlParams.get("state");
+
+      if (code) {
+        document.write("<p><strong>Code:</strong> " + code + "</p>");
+      } else {
+        document.write("<p>No code found.</p>");
+      }
+
+      if (state) {
+        document.write("<p><strong>State:</strong> " + state + "</p>");
+      }
+    </script>
+  </body>
+</html>
 
